@@ -1,0 +1,27 @@
+{
+    "name": "QuickDashboard-Debug",
+    "manifest_version": 3,
+    "description": "新标签页,书签管理,历史浏览记录展示插件",
+    "icons": {
+        "48": "icons/dashboard-debug.png"
+    },
+    "version": "0.0.2",
+    "background": {
+        "service_worker": "/background.js",
+        "type": "module"
+    },
+    "permissions": ["tabs","bookmarks","history","storage"],
+    "chrome_url_overrides": {
+        "newtab": "/tabIndex.html"
+    },
+    "action": {
+        "default_icon": {
+            "16": "icons/dashboard-action.png",
+            "24": "icons/dashboard-action.png",
+            "32": "icons/dashboard-action.png"
+        },
+        "default_title": "添加至导航",
+        "default_popup": "/addNvAction.html"
+    },
+    "options_page": "/popup.html"
+}
